@@ -26,15 +26,15 @@
 p input {
     background-color: transparent;
     border: 0;
-    width: 360px;
-    height: 40px;
+    width: 235px;
+    height: 30px;
 }
 
-p1 input {
+p1 textarea {
     background-color: transparent;
     border: 0;
-    width: 355px;
-    height: 240px;
+    width: 335px;
+    height: 225px;
 }
 
 p2 input {
