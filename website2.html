@@ -19,18 +19,31 @@
                     <textarea type="textarea" name="text" cols="3" rows="5" required=""
                         style="position:absolute; left:310px;top:175px;"></textarea>
                 </p1>
-                <p2>
+                <h2>
                     <input type="file" name="attachment" accept="image/png, image/jpeg"
-                        style="position: absolute; left: 565px;top:105px;" />
-                </p2>
+                        style="position: absolute; left: 565px;top:105px; " />
+                    <!-- <p><input type="hidden" id="hidden" /></p> -->
+                </h2>
             </div>
 
             <input type="hidden" name="_captcha" value="false">
             <input type="hidden" name="_next" value="https://www.christmastreebyebye.com/website3.html">
             <p3>
-                <button type="submit" style="position: absolute; left:315px;top:430px;">Send</button>
+                <button type="submit" style="position: absolute; left:480px;top:430px;">Send</button>
             </p3>
     </div>
+
+    <!-- <script type="text/javascript">
+        function showImg(input) {
+            var file = input.files[0];
+            var reader = new FileReader()
+            // 图片读取成功回调函数
+            reader.onload = function (e) {
+                document.getElementById('upload').src = e.target.result
+            }
+            reader.readAsDataURL(file)
+        }
+    </script> -->
 
 
     </form>

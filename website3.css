@@ -5,4 +5,9 @@
     -webkit-box-align: center;
     -webkit-box-orient: vertical;
     text-align: center;
+    cursor: url("光标.png"), auto;
+}
+
+html {
+    cursor: url("光标.png"), auto;
 }

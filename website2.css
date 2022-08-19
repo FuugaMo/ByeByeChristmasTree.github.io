@@ -8,48 +8,55 @@
     -webkit-box-align: center;
     -webkit-box-orient: vertical;
     text-align: center;
+    cursor: url("光标.png"), auto;
     /* justify-content: center; */
 
 }
 
-
-.input2 {
-    white-space: nowrap;
-    display: -webkit-box;
-    margin-left: -20%;
-    -webkit-box-pack: center;
-    -webkit-box-align: center;
-    -webkit-box-orient: vertical;
-    text-align: center;
-}
-
 p input {
+    outline: none;
+    /* 点击时的边框 */
     background-color: transparent;
+    /* 背景颜色为透明 */
     border: 0;
+    /* 未点击时的边框 */
     width: 235px;
     height: 30px;
+    cursor: url("光标.png"), auto;
 }
 
 p1 textarea {
+    resize: none;
+    outline: none;
     background-color: transparent;
     border: 0;
     width: 335px;
     height: 225px;
+    cursor: url("光标.png"), auto;
 }
 
-p2 input {
-    background-color: black;
+h2 input {
+    /* display: none; */
+    background-color: red;
     opacity: 0;
+    /* overflow: hidden; */
+    /* font-size: 0px; */
     border: 20px;
     width: 90px;
     height: 40px;
+    cursor: url("光标.png"), auto;
 }
 
 p3 button {
-    background-color: transparent;
+    /* background-color: red; */
     width: 145px;
     height: 42px;
     opacity: 0;
+    cursor: url("光标.png"), auto;
+}
+
+html {
+    cursor: url("光标.png"), auto !important;
 }
 
 /* #topic {

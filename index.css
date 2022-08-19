@@ -5,11 +5,17 @@
     -webkit-box-align: center;
     -webkit-box-orient: vertical;
     text-align: center;
+    cursor: url("光标.png"), auto;
 }
 
 p input {
     background-color: transparent;
+    cursor: url("光标.png"), auto;
     border: 0;
     width: 125px;
     height: 60px;
+}
+
+html {
+    cursor: url("光标.png"), auto;
 }
