@@ -38,8 +38,18 @@ p1 textarea {
 }
 
 p2 input {
-    width: 100px;
-    height: 100px;
+    background-color: black;
+    opacity: 0;
+    border: 20px;
+    width: 90px;
+    height: 40px;
+}
+
+p3 button {
+    background-color: transparent;
+    width: 145px;
+    height: 42px;
+    opacity: 0;
 }
 
 /* #topic {
