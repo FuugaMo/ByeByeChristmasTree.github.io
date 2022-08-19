@@ -1,0 +1,8 @@
+.img {
+    white-space: nowrap;
+    display: -webkit-box;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+    -webkit-box-orient: vertical;
+    text-align: center;
+}
