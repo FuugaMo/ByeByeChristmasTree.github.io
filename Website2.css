@@ -1,0 +1,65 @@
+.input1 {
+    /* max-width: 100%; */
+    /* height: auto; */
+    /* float: left; */
+    white-space: nowrap;
+    display: -webkit-box;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+    -webkit-box-orient: vertical;
+    text-align: center;
+    /* justify-content: center; */
+
+}
+
+
+.input2 {
+    white-space: nowrap;
+    display: -webkit-box;
+    margin-left: -20%;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+    -webkit-box-orient: vertical;
+    text-align: center;
+}
+
+p input {
+    background-color: transparent;
+    border: 0;
+    width: 360px;
+    height: 40px;
+}
+
+p1 input {
+    background-color: transparent;
+    border: 0;
+    width: 355px;
+    height: 240px;
+}
+
+p2 input {
+    width: 100px;
+    height: 100px;
+}
+
+/* #topic {
+    background-image: url("输入信息页-框框.png") no-repeat center;
+    font-size: 7px;
+    color: black !important;
+    /* border-radius: 12px; */
+/* background-position: 0px; */
+/* background-repeat: no-repeat;
+    display: inline-block;
+    color: #428bca;
+    width: 520px;
+    height: 100px !important; }*/
+
+/* input {
+    outline-style: auto;
+    border: 0px;
+} */
+/* 
+textarea {
+    outline-style: none;
+    border: 0px;
+} */

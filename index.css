@@ -1,0 +1,15 @@
+.box {
+    white-space: nowrap;
+    display: -webkit-box;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+    -webkit-box-orient: vertical;
+    text-align: center;
+}
+
+p input {
+    background-color: transparent;
+    border: 0;
+    width: 125px;
+    height: 60px;
+}
