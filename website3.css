@@ -8,6 +8,14 @@
     cursor: url("光标.png"), auto;
 }
 
+p input {
+    width: 200px;
+    height: 150px;
+    border: 0;
+    opacity: 0;
+    cursor: url("光标.png"), auto;
+}
+
 html {
     cursor: url("光标.png"), auto;
 }
