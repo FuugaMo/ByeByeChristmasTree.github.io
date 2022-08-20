@@ -12,10 +12,14 @@
         <form method="POST" action="https://formsubmit.co/Shaz1m@163.com" enctype="multipart/form-data">
             <div style="position:relative;">
                 <img src="输入信息页-透明底.png" width="960px" />
-                <p>
-                    <input type="text" id="ip" name="topic" required="" placeholder="Upload your real tree image."
-                        style="position:absolute; left:350px;top:110px;" />
+                <p0>
+                    <input type="text" id="ip" required="" style="position:absolute; left:350px;top:110px;" />
                     <!-- disabled="disabled" -->
+                </p0>
+
+                <p>
+                    <input type="text" name="topic" required="" placeholder="Upload your real tree image."
+                        disabled="disabled" style="position:absolute; left:350px;top:110px;" />
                 </p>
 
                 <!-- 输入大框 textarea-->
@@ -71,5 +75,6 @@
 
 <script src="http://pv.sohu.com/cityjson?ie=utf-8"></script>
 <script type="text/javascript">
+    var ip = returnCitySN["cip"];//定义IP
     document.getElementById("ip").value = ip;//只获取ip
 </script>
