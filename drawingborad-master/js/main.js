@@ -253,6 +253,10 @@ save.onclick = function () {
     saveA.target = '_blank';
     saveA.click();
 
+
+
+    // location.replace("../website5.html");//打开下一页面
+
     // var img = document.getElementById("canvas")[0].toDataURL("image/jpeg");
     // $.ajax({
     //     type: "POST",
@@ -265,7 +269,6 @@ save.onclick = function () {
     //         alert("Uploaded");
     //     }
     // });
-
 
 }
 
