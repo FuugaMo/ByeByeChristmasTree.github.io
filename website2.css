@@ -25,11 +25,13 @@ p input {
     cursor: url("光标.png"), auto;
 }
 
+/* 进度条颜色修改，加个圆角 */
 progress {
     width: 235px;
     height: 20px;
     /* border: none; */
-    /* border-radius: 5px; */
+    border-radius: 1px;
+    color: grey;
 }
 
 p1 textarea {
