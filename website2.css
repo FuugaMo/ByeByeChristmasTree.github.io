@@ -34,6 +34,14 @@ progress {
     color: grey;
 }
 
+progress::-webkit-progress-bar {
+    background-color: transparent;
+}
+
+progress::-webkit-progress-value {
+    background-color: gray;
+}
+
 p1 textarea {
     resize: none;
     outline: none;
