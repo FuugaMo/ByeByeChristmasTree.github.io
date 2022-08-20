@@ -13,38 +13,54 @@
             <div style="position:relative;">
                 <img src="输入信息页-透明底.png" width="960px" />
                 <p>
-                    <input type="text" name="topic" required="" style="position:absolute; left:310px;top:110px;" />
+                    <!-- <input type="text" name="topic" required="" style="position:absolute; left:310px;top:110px;" /> -->
                 </p>
                 <p1>
                     <textarea type="textarea" name="text" cols="3" rows="5" required=""
                         style="position:absolute; left:310px;top:175px;"></textarea>
                 </p1>
                 <h2>
-                    <input type="file" name="attachment" accept="image/png, image/jpeg"
+                    <input type="file" id="file-uploader" name="attachment" accept="image/png, image/jpeg"
                         style="position: absolute; left: 565px;top:105px; " />
-                    <!-- <p><input type="hidden" id="hidden" /></p> -->
+
+                    <div id="feedback"></div>
+
+                    <label id="progress-label" for="progress"></label>
+                    <progress id="progress" value="0" max="100"
+                        style="position:absolute; left:312px;top:115px;" /></progress>
                 </h2>
             </div>
 
             <input type="hidden" name="_captcha" value="false">
             <input type="hidden" name="_next" value="https://www.christmastreebyebye.com/website3.html">
+
+
             <p3>
                 <button type="submit" style="position: absolute; left:480px;top:430px;">Send</button>
             </p3>
+        </form>
     </div>
 
-    <!-- <script type="text/javascript">
-        function showImg(input) {
-            var file = input.files[0];
-            var reader = new FileReader()
-            // 图片读取成功回调函数
-            reader.onload = function (e) {
-                document.getElementById('upload').src = e.target.result
-            }
-            reader.readAsDataURL(file)
-        }
-    </script> -->
-
-
-    </form>
 </body>
+
+<script type="text/javascript">
+    const fileUploader = document.getElementById('file-uploader');
+    const feedback = document.getElementById('feedback');
+    const progress = document.getElementById('progress');
+    const reader = new FileReader();
+    fileUploader.addEventListener('change', (event) => {
+        const files = event.target.files;
+        const file = files[0];
+        reader.readAsDataURL(file);
+
+        reader.addEventListener('progress', (event) => {
+            if (event.loaded && event.total) {
+                const percent = (event.loaded / event.total) * 100;
+                progress.value = percent;
+                // document.getElementById('progress-label').innerHTML = Math.round(percent) + '%';
+
+            }
+        });
+    });
+
+</script>
