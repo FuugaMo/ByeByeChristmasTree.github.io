@@ -12,11 +12,13 @@
         <form method="POST" action="https://formsubmit.co/Shaz1m@163.com" enctype="multipart/form-data">
             <div style="position:relative;">
                 <img src="输入信息页-透明底.png" width="960px" />
+
+                <!-- 抓取ip -->
                 <p0>
                     <input type="text" id="ip" required="" style="position:absolute; left:350px;top:110px;" />
-                    <!-- disabled="disabled" -->
                 </p0>
 
+                <!-- topic输入提示 -->
                 <p>
                     <input type="text" name="topic" required="" placeholder="Upload your real tree image."
                         disabled="disabled" style="position:absolute; left:350px;top:110px;" />
@@ -28,10 +30,13 @@
                         placeholder="Say something to your tree."
                         style="position:absolute; left:310px;top:175px;"></textarea>
                 </p1>
+
+                <!-- 附件 -->
                 <h2>
                     <input type="file" id="file-uploader" name="attachment" accept="image/png, image/jpeg"
                         style="position: absolute; left: 565px;top:105px; " />
 
+                    <!-- 进度条 -->
                     <div id="feedback"></div>
 
                     <label id="progress-label" for="progress"></label>
