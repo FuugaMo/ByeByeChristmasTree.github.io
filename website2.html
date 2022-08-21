@@ -21,7 +21,7 @@
                 <!-- topic输入提示 -->
                 <p>
                     <input type="text" required="" placeholder="Upload your real tree image." disabled="disabled"
-                        style="position:absolute; left:350px;top:110px;" />
+                        style="position:absolute; left:335px;top:110px;" />
                 </p>
 
                 <!-- 输入大框 textarea-->
@@ -37,11 +37,10 @@
                         style="position: absolute; left: 565px;top:105px; " />
 
                     <!-- 进度条 -->
-                    <div id="feedback"></div>
-
                     <label id="progress-label" for="progress"></label>
                     <progress id="progress" value="0" max="100"
-                        style="position:absolute; left:312px;top:115px;" /></progress>
+                        style="position:absolute; left:313px;top:115px;" /></progress>
+
                 </h2>
             </div>
 
@@ -77,6 +76,8 @@
         });
     });
 </script>
+
+<!-- 抓取ip -->
 <!-- 使用https才不会被浏览器block -->
 <script src="https://pv.sohu.com/cityjson?ie=utf-8"></script>
 <script type="text/javascript">

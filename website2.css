@@ -39,15 +39,23 @@ p input {
     width: 235px;
     height: 30px;
     cursor: url("光标.png"), auto;
+    /* 字体大小 */
+    font-size: 15px;
+    /* 旋转 */
+    transform: rotate(-1deg);
 }
 
 /* 进度条颜色修改，加个圆角 */
 progress {
     width: 235px;
-    height: 20px;
+    height: 23px;
     /* border: none; */
-    border-radius: 1px;
+    /* border: 10px; */
+    border-radius: 20px;
+    overflow: hidden;
+    /* 一定要上面这行圆角才能起作用 */
     color: grey;
+    transform: rotate(-1deg);
 }
 
 progress::-webkit-progress-bar {
@@ -66,6 +74,9 @@ p1 textarea {
     width: 335px;
     height: 225px;
     cursor: url("光标.png"), auto;
+
+    font-size: 20px;
+    color: gray;
 }
 
 h2 input {
