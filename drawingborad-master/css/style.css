@@ -46,12 +46,15 @@ li {
 
 .tools {
     position: fixed;
-    left: 0px;
-    bottom: 30px;
+    transform-origin: 0 0;
+    transform: rotate(90deg);
+    left: 100px;
+    top: 30%;
+    /* bottom: 30px; */
     width: 100%;
     height: 50px;
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
     text-align: center;
 }
 
@@ -76,6 +79,8 @@ li {
     transition: 0.3s;
     cursor: pointer;
     border: 2px solid transparent;
+
+    transform: rotate(-90deg);
 }
 
 .tools button.save {
@@ -194,14 +199,16 @@ li {
     border-radius: 50%;
 }
 
+/* pen打开框 */
 .pen-detail {
     display: none;
     position: fixed;
-    left: 50%;
+    left: 260px;
+    top: 35%;
     margin-left: -140px;
     bottom: 90px;
     width: 280px;
-    height: 210px;
+    height: 230px;
     padding: 20px 24px;
     border: 1px solid #81A4BD;
     border-radius: 5px;
