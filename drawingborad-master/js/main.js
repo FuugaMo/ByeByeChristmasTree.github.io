@@ -307,12 +307,12 @@ range1.onchange = function () {
     lWidth = parseInt(range1.value * 2);
 }
 
-range2.onchange = function () {
-    opacity = 1 - parseInt(this.value) / 10;
-    if (opacity !== 0) {
-        showOpacity.style.opacity = opacity;
-    }
-}
+// range2.onchange = function () {
+//     opacity = 1 - parseInt(this.value) / 10;
+//     if (opacity !== 0) {
+//         showOpacity.style.opacity = opacity;
+//     }
+// }
 
 // 改变画笔颜色
 getColor();
