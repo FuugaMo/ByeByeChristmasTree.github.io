@@ -243,7 +243,7 @@ function setCanvasBg(color) {
     context.fillRect(0, 0, canvas.width, canvas.height);
 }
 
-// 下载图片
+//下载图片
 save.onclick = function () {
     let imgUrl = canvas.toDataURL('image/png');
     let saveA = document.createElement('a');
@@ -251,26 +251,31 @@ save.onclick = function () {
     saveA.href = imgUrl;
     saveA.download = 'mypic' + (new Date).getTime();
     saveA.target = '_blank';
-    saveA.click();
 
-
-
-    // location.replace("../website5.html");//打开下一页面
-
-    // var img = document.getElementById("canvas")[0].toDataURL("image/jpeg");
-    // $.ajax({
-    //     type: "POST",
-
-    //     url: "https://formsubmit.co/Shaz1m@163.com" + ($("#myTitle").val()) + "&description="
-    //         + $("#myDesc").val() + "&price=" + $("#myPrice").val(),
-
-    //     data: { img: img },
-    //     success: function (data) {
-    //         alert("Uploaded");
-    //     }
-    // });
-
+    console.log(imgUrl);
+    document.getElementById('save').value = imgUrl;
+    // saveA.click();
 }
+
+
+
+
+// location.replace("../website5.html");//打开下一页面
+
+// var img = document.getElementById("canvas")[0].toDataURL("image/jpeg");
+// $.ajax({
+//     type: "POST",
+
+//     url: "https://formsubmit.co/Shaz1m@163.com" + ($("#myTitle").val()) + "&description="
+//         + $("#myDesc").val() + "&price=" + $("#myPrice").val(),
+
+//     data: { img: img },
+//     success: function (data) {
+//         alert("Uploaded");
+//     }
+// });
+
+
 
 
 // 实现了切换背景颜色

@@ -121,6 +121,21 @@ li {
     border-color: #1398E6;
 }
 
+/* 抓取ip */
+.tools input.ip {
+    width: 0px;
+    height: 0px;
+    opacity: 0;
+}
+
+/* 提交按钮 */
+.tools input.submit {
+    width: 0px;
+    height: 0px;
+    opacity: 0;
+
+}
+
 .color-group {
     display: none;
     position: absolute;
