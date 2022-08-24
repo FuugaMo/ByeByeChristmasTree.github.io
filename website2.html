@@ -3,52 +3,104 @@
 
 <head>
     <meta charset="utf-8" />
-    <link href="website2.css" rel="stylesheet" />
+    <link
+        href="website2.css"
+        rel="stylesheet"
+    />
 </head>
 
 
 <body>
     <div class="input1 ">
-        <form method="POST" action="https://formsubmit.co/Shaz1m@163.com" enctype="multipart/form-data">
+        <form
+            method="POST"
+            action="https://formsubmit.co/Shaz1m@163.com"
+            enctype="multipart/form-data"
+        >
             <div style="position:relative;">
-                <img src="输入信息页-透明底.png" width="960px" />
+                <img
+                    src="输入信息页-透明底.png"
+                    width="960px"
+                />
 
                 <!-- 抓取ip -->
                 <p0>
-                    <input type="text" id="ip" name="ip" required="" style="position:absolute; left:350px;top:110px;" />
+                    <input
+                        type="text"
+                        id="ip"
+                        name="ip"
+                        required=""
+                        style="position:absolute; left:350px;top:110px;"
+                    />
                 </p0>
 
                 <!-- topic输入提示 -->
                 <p>
-                    <input type="text" required="" placeholder="Upload your tree's photo →" disabled="disabled"
-                        style="position:absolute; left:340px;top:110px;" />
+                    <input
+                        type="text"
+                        required=""
+                        placeholder="Upload your tree's photo →"
+                        disabled="disabled"
+                        style="position:absolute; left:340px;top:110px;"
+                    />
                 </p>
 
                 <!-- 输入大框 textarea-->
                 <p1>
-                    <textarea type="textarea" name="text" cols="3" rows="5" required="" placeholder=""
-                        style="position:absolute; left:315px;top:175px;"></textarea>
+                    <textarea
+                        type="textarea"
+                        name="text"
+                        cols="3"
+                        rows="5"
+                        required=""
+                        placeholder=""
+                        style="position:absolute; left:315px;top:175px;"
+                    ></textarea>
                 </p1>
 
                 <!-- 附件 -->
                 <h2>
-                    <input type="file" id="file-uploader" name="attachment" accept="image/png, image/jpeg"
-                        style="position: absolute; left: 565px;top:105px; " />
+                    <input
+                        type="file"
+                        id="file-uploader"
+                        name="attachment"
+                        accept="image/png, image/jpeg"
+                        style="position: absolute; left: 565px;top:105px; "
+                    />
 
                     <!-- 进度条 -->
-                    <label id="progress-label" for="progress"></label>
-                    <progress id="progress" value="0" max="100"
-                        style="position:absolute; left:313px;top:115px;" /></progress>
+                    <label
+                        id="progress-label"
+                        for="progress"
+                    ></label>
+                    <progress
+                        id="progress"
+                        value="0"
+                        max="100"
+                        style="position:absolute; left:313px;top:115px;"
+                    /></progress>
 
                 </h2>
+
+
+                <input
+                    type="hidden"
+                    name="_captcha"
+                    value="false"
+                >
+                <input
+                    type="hidden"
+                    name="_next"
+                    value="https://www.christmastreebyebye.com/website3.html"
+                >
+
+
+                <p3>
+                    <button
+                        type="submit"
+                        style="position:absolute; left:310px;top:425px;"
+                    >Send</button>
             </div>
-
-            <input type="hidden" name="_captcha" value="false">
-            <input type="hidden" name="_next" value="https://www.christmastreebyebye.com/website3.html">
-
-
-            <p3>
-                <button type="submit" style="position: absolute; left:480px;top:430px;">Send</button>
             </p3>
         </form>
     </div>
