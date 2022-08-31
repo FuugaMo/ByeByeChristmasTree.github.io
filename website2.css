@@ -81,7 +81,6 @@ p1 textarea {
 }
 
 h2 input {
-    /* display: none; */
     background-color: red;
     opacity: 0;
     /* overflow: hidden; */
@@ -89,6 +88,12 @@ h2 input {
     border: 20px;
     width: 90px;
     height: 40px;
+    cursor: url("光标.png"), auto;
+    /* display: none; */
+}
+
+/* input file上光标会变回去的解决方案 */
+input[type=file]::-webkit-file-upload-button {
     cursor: url("光标.png"), auto;
 }
 
