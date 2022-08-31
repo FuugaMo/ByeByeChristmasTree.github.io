@@ -362,7 +362,7 @@ function canvasUndo() {
         redo.classList.add('active');
     } else {
         undo.classList.remove('active');
-        alert('不能再继续撤销了');
+        alert('Can not continue to undo!');
     }
 }
 // 重做方法
@@ -377,7 +377,7 @@ function canvasRedo() {
         // redo.classList.add('active');
     } else {
         redo.classList.remove('active')
-        alert('已经是最新的记录了');
+        alert('Can not continue to redo!');
     }
 }
 undo.onclick = function () {
