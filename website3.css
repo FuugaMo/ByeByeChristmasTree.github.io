@@ -21,14 +21,11 @@
 
 #guide {
     position: relative;
-    display: -webkit-box;
-    -webkit-box-pack: center;
-    -webkit-box-align: center;
-    -webkit-box-orient: vertical;
-    text-align: center;
+    margin: 0 auto;
+    width: 400px;
     left: 280px;
     top: -150px;
-    display: none;
+    /* display: none; */
 }
 
 p input {
