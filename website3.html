@@ -23,19 +23,37 @@
         class="imgB"
         style="position:relative"
     >
-        <a 123>
-            <img
-                src="兑换券.png"
-                width="100px"
+        <img
+            src="兑换券.png"
+            width="100px"
+        >
+        <p>
+            <input
+                type="button"
+                onclick='location.href=("./drawingborad-master/index1.html")'
+                style="position: relative; left: 0px;top:-80px"
+                onmouseover="show();"
+                onmouseout="dis();"
             >
-            <p>
-                <input
-                    type="button"
-                    onclick='location.href=("./drawingborad-master/index1.html")'
-                    style="position: relative; left: 0px;top:-73px"
-                >
-        </a>
         </p>
     </div>
 
+
+    <div id="guide">
+        <img
+            src="./Image/鼠标悬浮图.png"
+            width="400px"
+        >
+    </div>
+
+
+
 </body>
+<script>
+    function show() {
+        document.getElementById("guide").style.display = "block";
+    }
+    function dis() {
+        document.getElementById("guide").style.display = "none";
+    }
+</script>

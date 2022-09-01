@@ -18,17 +18,22 @@
     text-align: center;
 }
 
-/* a img {
+
+#guide {
+    position: relative;
+    display: -webkit-box;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+    -webkit-box-orient: vertical;
+    text-align: center;
+    left: 280px;
+    top: -150px;
     display: none;
 }
 
-a:hover img {
-    display: block;
-} */
-
 p input {
-    width: 100px;
-    height: 55px;
+    width: 120px;
+    height: 70px;
     border: 0;
     opacity: 0;
     cursor: url("光标.png"), auto;
