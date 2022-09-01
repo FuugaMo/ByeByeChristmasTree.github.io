@@ -21,6 +21,7 @@
 
 #guide {
     position: relative;
+    /* 当div设置宽度后想要居中就用下面这个方法 */
     margin: 0 auto;
     width: 400px;
     left: 280px;
