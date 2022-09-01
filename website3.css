@@ -1,12 +1,30 @@
-.img {
+.imgA {
+    margin-top: 200px;
     white-space: nowrap;
     display: -webkit-box;
     -webkit-box-pack: center;
     -webkit-box-align: center;
     -webkit-box-orient: vertical;
     text-align: center;
-    cursor: url("光标.png"), auto;
 }
+
+.imgB {
+    margin-top: 30px;
+    white-space: nowrap;
+    display: -webkit-box;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+    -webkit-box-orient: vertical;
+    text-align: center;
+}
+
+/* a img {
+    display: none;
+}
+
+a:hover img {
+    display: block;
+} */
 
 p input {
     width: 100px;

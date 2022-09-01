@@ -83,37 +83,42 @@ li {
     transform: rotate(-90deg);
 }
 
+html {
+    cursor: url("../image/MyImage/cursor.cur") 4 27, auto;
+}
+
+
 .tools button.save {
-    background-image: url('../image/save.png');
+    background-image: url('../image/MyImage/save.png');
 }
 
 .tools button.brush {
-    background-image: url('../image/pen.png');
+    background-image: url('../image/MyImage/pen.png');
 }
 
 .tools button.eraser {
-    background-image: url('../image/eraser.png');
+    background-image: url('../image/MyImage/eraser.png');
 }
 
 .tools button.clear {
-    background-image: url('../image/clear.png');
+    background-image: url('../image/MyImage/clear.png');
 }
 
 .tools button.undo {
-    background-image: url('../image/undo_sel.png');
+    background-image: url('../image/MyImage/undo.png');
 }
 
 .tools button.redo {
-    background-image: url('../image/redo_sel.png');
+    background-image: url('../image/MyImage/redo.png');
 }
 
 .tools button.undo.active {
-    background-image: url('../image/undo.png');
+    background-image: url('../image/MyImage/undo.png');
     border-color: transparent;
 }
 
 .tools button.redo.active {
-    background-image: url('../image/redo.png');
+    background-image: url('../image/MyImage/redo.png');
     border-color: transparent;
 }
 
