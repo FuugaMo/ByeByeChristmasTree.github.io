@@ -342,7 +342,7 @@ let step = -1;
 function canvasDraw() {
     step++;
     if (step < canvasHistory.length) {
-        canvasHistory.length = step;  // 截断数组
+        canvasHistory.length = step   // 截断数组
     }
     // 添加新的绘制到历史记录
     canvasHistory.push(canvas.toDataURL());
@@ -361,22 +361,29 @@ function canvasUndo() {
         undo.classList.add('active');
         redo.classList.add('active');
     } else {
+        //直接清屏
+        context.clearRect(0, 0, canvas.width, canvas.height);
+        setCanvasBg('white');
+        // canvasHistory = [];
         undo.classList.remove('active');
-        alert('Can not continue to undo!');
+        redo.classList.remove('active');
+
+        undo.classList.remove('active');
+        // alert('Can not continue to undo!');
     }
 }
 // 重做方法
 function canvasRedo() {
-    if (step < canvasHistory.length - 1) {
+    if (step < canvasHistory.length) {
         step++;
         let canvasPic = new Image();
-        canvasPic.src = canvasHistory[step];
+        canvasPic.src = canvasHistory[step - 1];
         canvasPic.onload = function () {
             context.drawImage(canvasPic, 0, 0);
         }
         // redo.classList.add('active');
     } else {
-        redo.classList.remove('active')
+        redo.classList.remove('active');
         alert('Can not continue to redo!');
     }
 }
