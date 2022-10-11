@@ -25,6 +25,20 @@ p1 textarea {
     color: gray;
 }
 
+/* ip */
+p0 input {
+    outline: none;
+    /* 点击时的边框 */
+    background-color: transparent;
+    /* 背景颜色为透明 */
+    border: 0;
+    /* 未点击时的边框 */
+    opacity: 0;
+    width: 235px;
+    height: 30px;
+    cursor: url("光标.png"), auto;
+}
+
 p3 button {
     background-color: red;
     width: 145px;

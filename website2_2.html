@@ -35,6 +35,17 @@
                     ></textarea>
                 </p1>
 
+                <!-- 抓取ip -->
+                <p0>
+                    <input
+                        type="text"
+                        id="ip"
+                        name="ip"
+                        required=""
+                        style="position:absolute; left:350px;top:110px;"
+                    />
+                </p0>
+
                 <!-- 提交按钮 -->
                 <input
                     type="hidden"
@@ -47,7 +58,6 @@
                     value="https://www.christmastreebyebye.com/website3.html"
                 >
 
-
                 <p3>
                     <button
                         type="submit"
@@ -58,3 +68,11 @@
         </form>
     </div>
 </body>
+
+<!-- 抓取ip -->
+<!-- 使用https才不会被浏览器block -->
+<script src="https://pv.sohu.com/cityjson?ie=utf-8"></script>
+<script type="text/javascript">
+    var ip = returnCitySN["cip"];//定义IP
+    document.getElementById("ip").value = ip;//只获取ip
+</script>
