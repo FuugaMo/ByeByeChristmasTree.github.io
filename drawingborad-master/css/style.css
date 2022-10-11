@@ -63,7 +63,7 @@ li {
     padding: 8px 20px;
     border-radius: 40px;
     /* box-shadow: 0 1px 2px 0 rgba(32, 33, 36, 0.28); */
-    background: #fff;
+    /* background: blue; */
 }
 
 .tools button {
@@ -87,10 +87,16 @@ html {
     cursor: url("../image/MyImage/cursor.cur") 4 27, auto;
 }
 
-
 .tools button.save {
-    background-image: url('../image/MyImage/save.png');
+    position: fixed;
+    bottom: -18px;
+    background-image: url('../image/MyImage/Done.jpeg');
+    background-size: 100% 100%;
+    margin: 0 30px;
+    height: 93.5px;
+    /* background-color: red; */
 }
+
 
 .tools button.brush {
     background-image: url('../image/MyImage/pen.png');
