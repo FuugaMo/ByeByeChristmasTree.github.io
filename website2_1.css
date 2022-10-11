@@ -1,0 +1,58 @@
+html {
+    cursor: url("光标.png"), auto !important;
+}
+
+/* input file上光标会变回去的解决方案 */
+/* https: //stackoverflow.com/questions/1537223/change-cursor-type-on-input-type-file */
+input[type=file]::-webkit-file-upload-button {
+    cursor: url("光标.png"), auto;
+}
+
+.input {
+    /* max-width: 100%; */
+    /* height: auto; */
+    /* float: left; */
+    white-space: nowrap;
+    display: -webkit-box;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+    -webkit-box-orient: vertical;
+    text-align: center;
+    cursor: url("光标.png"), auto;
+    /* justify-content: center; */
+
+}
+
+/* ip */
+p0 input {
+    outline: none;
+    /* 点击时的边框 */
+    background-color: transparent;
+    /* 背景颜色为透明 */
+    border: 0;
+    /* 未点击时的边框 */
+    opacity: 0;
+    width: 235px;
+    height: 30px;
+    cursor: url("光标.png"), auto;
+}
+
+h1 input {
+    background-color: red;
+    opacity: 0;
+    /* overflow: hidden; */
+    /* font-size: 0px; */
+    border: 20px;
+    width: 90px;
+    height: 40px;
+    cursor: url("光标.png"), auto;
+    /* display: none; */
+}
+
+p1 button {
+    /* background-color: red; */
+    width: 145px;
+    height: 42px;
+    opacity: 0;
+    cursor: url("光标.png"), auto;
+}

