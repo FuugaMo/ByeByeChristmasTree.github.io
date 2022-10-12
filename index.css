@@ -6,6 +6,7 @@
     -webkit-box-orient: vertical;
     text-align: center;
     cursor: url("光标.png"), auto;
+    margin-top: -100px;
 }
 
 p input {
@@ -28,7 +29,7 @@ html {
     -webkit-box-align: start;
     -webkit-box-orient: start;
     text-align: center;
-    margin-left: 5px;
+    margin-left: 10px;
     /* opacity: 0; */
 }
 
@@ -63,7 +64,7 @@ html {
 
 .about {
     position: absolute;
-    right: 10px;
+    right: 15px;
     top: 10px;
 }
 
