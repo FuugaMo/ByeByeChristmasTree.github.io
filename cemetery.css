@@ -6,7 +6,7 @@
     -webkit-box-align: start;
     -webkit-box-orient: start;
     text-align: center;
-    margin-left: 5px;
+    margin-left: 10px;
     /* opacity: 0; */
 }
 
@@ -41,7 +41,7 @@
 
 .about {
     position: absolute;
-    right: 10px;
+    right: 15px;
     top: 10px;
 }
 
@@ -58,3 +58,127 @@
 }
 
 /* 导航栏结束 */
+
+.CemeteryGate {
+    white-space: nowrap;
+    display: -webkit-box;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+    -webkit-box-orient: vertical;
+    text-align: center;
+    width: 1040px;
+    margin: 0 auto;
+}
+
+.Content {
+    white-space: nowrap;
+    display: -webkit-box;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+    -webkit-box-orient: vertical;
+    text-align: center;
+    overflow: clip;
+    height: 350px;
+    width: 1040px;
+    margin: 0 auto;
+}
+
+#BorderLeft {
+    width: 10px;
+    height: 350px;
+    /* margin-right: 505px;
+    overflow: hidden; */
+
+}
+
+#BorderRight {
+    width: 10px;
+    height: 350px;
+    /* margin-left: 505px;
+    overflow: hidden; */
+}
+
+
+.Tree {
+    width: 150px;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 70px;
+    margin-bottom: 70px;
+    display: inline-block;
+}
+
+span {
+    word-break: normal;
+    width: 300px;
+    /* display: block; */
+    text-align: left;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    overflow: scroll;
+}
+
+.hiddenInfoA {
+    display: block;
+    width: 150px;
+    height: 210px;
+    /* overflow: auto; */
+    position: relative;
+    left: -430px;
+    top: -350px;
+    background-color: white;
+    opacity: 0;
+    pointer-events: none;
+    transition-property: all;
+    transition-duration: 0.6s;
+    /* overflow: hidden; */
+    z-index: 1;
+}
+
+.hiddenInfoB {
+    /* display: inline-block; */
+    width: 170px;
+    height: 210px;
+    /* overflow: auto; */
+    position: relative;
+    left: -170px;
+    top: -560px;
+    background-color: white;
+    opacity: 0;
+    pointer-events: none;
+    transition-property: all;
+    transition-duration: 0.6s;
+    z-index: 1;
+}
+
+.hiddenInfoC {
+    display: inline-block;
+    width: 170px;
+    height: 210px;
+    /* overflow: auto; */
+    position: relative;
+    left: 85px;
+    top: -780px;
+    opacity: 0;
+    background-color: white;
+    pointer-events: none;
+    transition-property: all;
+    transition-duration: 0.6s;
+    z-index: 1;
+}
+
+.hiddenInfoD {
+    display: block;
+    width: 170px;
+    height: 210px;
+    /* overflow: auto; */
+    position: relative;
+    left: 340px;
+    top: -1130px;
+    opacity: 0;
+    background-color: white;
+    pointer-events: none;
+    transition-property: all;
+    transition-duration: 0.6s;
+    z-index: 1;
+}

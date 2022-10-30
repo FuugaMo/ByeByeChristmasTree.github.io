@@ -6,7 +6,7 @@
     -webkit-box-align: start;
     -webkit-box-orient: start;
     text-align: center;
-    margin-left: 5px;
+    margin-left: 10px;
     /* opacity: 0; */
 }
 
@@ -41,7 +41,7 @@
 
 .about {
     position: absolute;
-    right: 10px;
+    right: 15px;
     top: 10px;
 }
 

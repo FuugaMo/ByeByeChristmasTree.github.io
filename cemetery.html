@@ -55,7 +55,247 @@
                 onclick='location.href=("about.html")'
             />
         </div>
-
     </nav>
-    cemetery
+
+    <!-- 宽度1000px，每棵树占250px -->
+    <div
+        class="CemeteryGate"
+        style="position: relative;"
+    > <img
+            src="./Image/BorderLeft.png"
+            height="193px"
+            width="10px"
+        />
+        <img
+            src="./Image/CemeteryGate.png"
+            width="1010px"
+        />
+        <img
+            src="./Image/BorderRight.png"
+            height="193px"
+            width="10px"
+        />
+
+    </div>
+
+    <div
+        class="Content"
+        style="position: relative;"
+    >
+        <img
+            src="./Image/BorderLeft.png"
+            id="BorderLeft"
+        />
+        <img
+            class="Tree"
+            src="./CemeteryImage/TestTree1/Tree1Paint.jpeg"
+            onmouseover="show1();"
+            onmouseout="dis1();"
+        />
+        <img
+            class="Tree"
+            src="./CemeteryImage/TestTree2/Tree2Paint.jpeg"
+            onmouseover="show2();"
+            onmouseout="dis2();"
+        />
+        <img
+            class="Tree"
+            src="./CemeteryImage/TestTree3/Tree3Paint.jpeg"
+            onmouseover="show3();"
+            onmouseout="dis3();"
+        />
+        <img
+            class="Tree"
+            src="./CemeteryImage/TestTree4/Tree4Paint.jpeg"
+            onmouseover="show4();"
+            onmouseout="dis4();"
+        />
+        <img
+            src="./Image/BorderRight.png"
+            id="BorderRight"
+        />
+
+
+        <div
+            class="hiddenInfoA"
+            id="hiddenInfo1"
+        >
+            <img
+                class="Tree"
+                src="./CemeteryImage/TestTree1/Tree1Real.jpeg"
+            />
+            <span style="position: absolute; top: 280px; left: 50px;">I hope you are happy in heaven and thank you for your wonderful company.</span>
+        </div>
+        <div
+            class="hiddenInfoB"
+            id="hiddenInfo2"
+        >
+            <img
+                class="Tree"
+                src="./CemeteryImage/TestTree2/Tree2Real.jpeg"
+            />
+            <span style="position: absolute; top: 280px; left: 50px;">You are a very beautiful tree, thank you, you smell good.</span>
+        </div>
+        <div
+            class="hiddenInfoC"
+            id="hiddenInfo3"
+        >
+            <img
+                class="Tree"
+                src="./CemeteryImage/TestTree3/Tree3Real.jpeg"
+            />
+            <span style="position: absolute; top: 280px; left: 50px;">Goodbye Christmas tree, I had a wonderful Christmas. I hope you are very happy in Christmas heaven and grow tall and big. You are a good tree. Bye bye kisskiss!
+            </span>
+        </div>
+        <div
+            class="hiddenInfoD"
+            id="hiddenInfo4"
+        >
+            <img
+                class="Tree"
+                src="./CemeteryImage/TestTree4/Tree4Real.jpeg"
+            />
+            <span style="position: absolute; top: 280px; left: 50px;">Goodbye and best wishes.
+            </span>
+
+        </div>
+    </div>
+
+    <div
+        class="Content"
+        style="position: relative;"
+        width="1020px"
+    >
+        <img
+            src="./Image/BorderLeft.png"
+            id="BorderLeft"
+        />
+        <img
+            class="Tree"
+            src="./CemeteryImage/TestTree1/Tree1Paint.jpeg"
+            onmouseover="show5();"
+            onmouseout="dis5();"
+        />
+        <img
+            class="Tree"
+            src="./CemeteryImage/TestTree2/Tree2Paint.jpeg"
+            onmouseover="show6();"
+            onmouseout="dis6();"
+        />
+        <img
+            class="Tree"
+            src="./CemeteryImage/TestTree3/Tree3Paint.jpeg"
+            onmouseover="show7();"
+            onmouseout="dis7();"
+        />
+        <img
+            class="Tree"
+            src="./CemeteryImage/TestTree4/Tree4Paint.jpeg"
+            onmouseover="show8();"
+            onmouseout="dis8();"
+        />
+        <img
+            src="./Image/BorderRight.png"
+            id="BorderRight"
+        />
+
+
+        <div
+            class="hiddenInfoA"
+            id="hiddenInfo5"
+        >
+            <img
+                class="Tree"
+                src="./CemeteryImage/TestTree1/Tree1Real.jpeg"
+            />
+            <span style="position: absolute; top: 280px; left: 50px;">I hope you are happy in heaven and thank you for your wonderful company.</span>
+        </div>
+        <div
+            class="hiddenInfoB"
+            id="hiddenInfo6"
+        >
+            <img
+                class="Tree"
+                src="./CemeteryImage/TestTree2/Tree2Real.jpeg"
+            />
+            <span style="position: absolute; top: 280px; left: 50px;">You are a very beautiful tree, thank you, you smell good.</span>
+        </div>
+        <div
+            class="hiddenInfoC"
+            id="hiddenInfo7"
+        >
+            <img
+                class="Tree"
+                src="./CemeteryImage/TestTree3/Tree3Real.jpeg"
+            />
+            <span style="position: absolute; top: 280px; left: 50px;">Goodbye Christmas tree, I had a wonderful Christmas. I hope you are very happy in Christmas heaven and grow tall and big. You are a good tree. Bye bye kisskiss!
+            </span>
+        </div>
+        <div
+            class="hiddenInfoD"
+            id="hiddenInfo8"
+        >
+            <img
+                class="Tree"
+                src="./CemeteryImage/TestTree4/Tree4Real.jpeg"
+            />
+            <span style="position: absolute; top: 280px; left: 50px;">Goodbye and best wishes.
+            </span>
+
+        </div>
+    </div>
+
+
 </body>
+
+<!-- 光标移动导致卡顿闪烁解决方案https://blog.csdn.net/applyTang/article/details/98640788 -->
+<script>
+    function show1() {
+        document.getElementById("hiddenInfo1").style.opacity = "0.6";
+    }
+    function dis1() {
+        document.getElementById("hiddenInfo1").style.opacity = "0";
+    }
+    function show2() {
+        document.getElementById("hiddenInfo2").style.opacity = "0.6";
+    }
+    function dis2() {
+        document.getElementById("hiddenInfo2").style.opacity = "0";
+    }
+    function show3() {
+        document.getElementById("hiddenInfo3").style.opacity = "0.6";
+    }
+    function dis3() {
+        document.getElementById("hiddenInfo3").style.opacity = "0";
+    }
+    function show4() {
+        document.getElementById("hiddenInfo4").style.opacity = "0.6";
+    }
+    function dis4() {
+        document.getElementById("hiddenInfo4").style.opacity = "0";
+    }
+    function show5() {
+        document.getElementById("hiddenInfo5").style.opacity = "0.6";
+    }
+    function dis5() {
+        document.getElementById("hiddenInfo5").style.opacity = "0";
+    }
+    function show6() {
+        document.getElementById("hiddenInfo6").style.opacity = "0.6";
+    }
+    function dis6() {
+        document.getElementById("hiddenInfo6").style.opacity = "0";
+    }
+    function show7() {
+        document.getElementById("hiddenInfo7").style.opacity = "0.6";
+    }
+    function dis7() {
+        document.getElementById("hiddenInfo7").style.opacity = "0";
+    }
+    function show8() {
+        document.getElementById("hiddenInfo8").style.opacity = "0.6";
+    }
+    function dis8() {
+        document.getElementById("hiddenInfo8").style.opacity = "0";
+    }
+</script>
