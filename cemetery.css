@@ -109,7 +109,8 @@
 
 .Tree {
     width: 15%;
-    margin-left: 5%;
+    height: 15%;
+    margin-left: 3%;
     margin-right: 5%;
     margin-top: 70px;
     margin-bottom: 70px;
@@ -131,7 +132,9 @@ span {
     display: inline-block;
     width: 100%;
     left: 5%;
+    /* top: 70px; */
     top: 85%;
+    /* margin-top: 35px; */
     text-align: justify;
     text-align-last: justify;
     white-space: pre-wrap;
@@ -143,10 +146,10 @@ span {
 .hiddenInfoA {
     display: inline-block;
     width: 15%;
-    height: auto;
+    height: 100%;
     /* overflow: auto; */
     position: absolute;
-    left: 6%;
+    left: 5%;
     top: 0px;
     background-color: white;
     opacity: 0;
@@ -162,7 +165,7 @@ span {
     height: auto;
     /* overflow: auto; */
     position: absolute;
-    left: 30%;
+    left: 28%;
     top: 0px;
     background-color: white;
     opacity: 0;
@@ -178,7 +181,7 @@ span {
     height: auto;
     /* overflow: auto; */
     position: absolute;
-    left: 55%;
+    left: 52%;
     top: 0px;
     opacity: 0;
     background-color: white;
@@ -194,7 +197,7 @@ span {
     height: auto;
     /* overflow: auto; */
     position: absolute;
-    left: 80%;
+    left: 75%;
     top: 0px;
     opacity: 0;
     background-color: white;
