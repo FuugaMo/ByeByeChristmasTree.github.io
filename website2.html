@@ -19,7 +19,7 @@
         >
             <div style="position:relative;">
                 <img
-                    src="输入信息页-透明底.png"
+                    src="./Image/website2.png"
                     width="960px"
                 />
 
@@ -35,7 +35,7 @@
                 </p0>
 
                 <!-- topic输入提示 -->
-                <p>
+                <!-- <p>
                     <input
                         type="text"
                         required=""
@@ -43,7 +43,7 @@
                         disabled="disabled"
                         style="position:absolute; left:340px;top:110px;"
                     />
-                </p>
+                </p> -->
 
                 <!-- 输入大框 textarea-->
                 <p1>
@@ -54,7 +54,7 @@
                         rows="5"
                         required=""
                         placeholder=""
-                        style="position:absolute; left:315px;top:175px;"
+                        style="position:absolute; left:313px;top:217px;"
                     ></textarea>
                 </p1>
 
@@ -65,12 +65,12 @@
                         id="file-uploader"
                         name="attachment"
                         accept="image/png, image/jpeg"
-                        style="position: absolute; left: 565px;top:105px; "
+                        style="position: absolute; left: 400px;top:78px; "
                     />
                     <!-- </a> -->
 
                     <!-- 进度条 -->
-                    <label
+                    <!-- <label
                         id="progress-label"
                         for="progress"
                     ></label>
@@ -79,12 +79,17 @@
                         value="0"
                         max="100"
                         style="position:absolute; left:313px;top:115px;"
-                    /></progress>
+                    /></progress> -->
 
                     <!-- 完成框 -->
 
                 </h2>
 
+                <!-- 图片上传完成反馈图标 -->
+                <img
+                    id="CompleteIcon"
+                    src="./Image/Uploaded.png"
+                />
 
                 <input
                     type="hidden"
@@ -101,7 +106,7 @@
                 <p3>
                     <button
                         type="submit"
-                        style="position:absolute; left:310px;top:425px;"
+                        style="position:absolute; left:310px;top:465px;"
                     >Send</button>
             </div>
             </p3>
@@ -123,12 +128,20 @@
 
         reader.addEventListener('progress', (event) => {
             if (event.loaded && event.total) {
-                const percent = (event.loaded / event.total) * 100;
-                progress.value = percent;
+                show();
+                // const percent = (event.loaded / event.total) * 100;
+                // progress.value = percent;
                 // document.getElementById('progress-label').innerHTML = Math.round(percent) + '%';
             }
         });
     });
+</script>
+
+<!-- 上传完成后显示显示icon -->
+<script>
+    function show() {
+        document.getElementById("CompleteIcon").style.opacity = "1";
+    }
 </script>
 
 <!-- 抓取ip -->
