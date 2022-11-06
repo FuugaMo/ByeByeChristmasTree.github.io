@@ -211,3 +211,7 @@ body {
     width: 100%;
     overflow-x: hidden;
 }
+
+html {
+    cursor: url("光标.png"), auto;
+}
