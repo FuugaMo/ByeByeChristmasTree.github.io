@@ -34,6 +34,7 @@ html {
 }
 
 .home input {
+    cursor: url("光标.png"), auto;
     position: absolute;
     width: 60px;
     height: 25px;
@@ -52,6 +53,7 @@ html {
 }
 
 .cemetery input {
+    cursor: url("光标.png"), auto;
     position: relative;
     width: 100px;
     height: 60px;
@@ -69,6 +71,7 @@ html {
 }
 
 .about input {
+    cursor: url("光标.png"), auto;
     position: absolute;
     width: 60px;
     height: 25px;
