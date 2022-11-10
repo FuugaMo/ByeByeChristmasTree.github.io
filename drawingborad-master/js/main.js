@@ -32,6 +32,8 @@ setCanvasBg('white');
 
 listenToUser();
 
+//初始化默认画笔颜色
+context.strokeStyle = '#b1987a';
 
 /* 下面是实现相关效果的函数，可以不用看 */
 
@@ -148,9 +150,6 @@ function listenToUser() {
             canvasDraw();
         }
     }
-
-
-
 }
 
 // 
@@ -325,6 +324,7 @@ function getColor() {
                 aColorBtn[i].classList.remove("active");
                 this.classList.add("active");
                 activeColor = this.style.backgroundColor;
+                // alert(this.style.backgroundColor); //
                 context.fillStyle = activeColor;
                 context.strokeStyle = activeColor;
             }
