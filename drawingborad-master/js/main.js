@@ -244,19 +244,40 @@ function setCanvasBg(color) {
 
 //下载图片
 save.onclick = function () {
-    let imgUrl = canvas.toDataURL('image/png');
+    let imgUrl = canvas.toDataURL('image/png',0.1);
     let saveA = document.createElement('a');
     document.body.appendChild(saveA);
     saveA.href = imgUrl;
     saveA.download = 'mypic' + (new Date).getTime();
     saveA.target = '_blank';
 
+    // let tempImg = dataURLtoFile(imgUrl, tempImg);
+    // let imgBlob = dataURLtoBlob(imgUrl);
+    // let newimgUrl = imgUrl.replaceAll("\r\n", "");
     console.log(imgUrl);
     document.getElementById('save').value = imgUrl;
+    // document.getElementById('save').append(tempImg);
     // saveA.click();
 }
 
+function dataURLtoFile(dataurl, filename) {
+    console.log("转文件")
+    var arr = dataurl.split(','), mime = arr[0].match(/:(.*?);/)[1],
+        bstr = atob(arr[1]), n = bstr.length, u8arr = new Uint8Array(n);
+    while (n--) {
+        u8arr[n] = bstr.charCodeAt(n);
+    }
+    return new File([u8arr], filename, { type: mime });
+}
 
+function dataURLtoBlob(dataurl) {
+    var arr = dataurl.split(','), mime = arr[0].match(/:(.*?);/)[1],
+        bstr = atob(arr[1]), n = bstr.length, u8arr = new Uint8Array(n);
+    while (n--) {
+        u8arr[n] = bstr.charCodeAt(n);
+    }
+    return new Blob([u8arr], { type: mime });
+}
 
 
 // location.replace("../website5.html");//打开下一页面
