@@ -74,6 +74,7 @@
                         id="redo"
                         title="redo"
                     ></button>
+
                     <form
                         method="POST"
                         action="https://formsubmit.co/6f5fbc7579aa942bc3ef3fdf0386cfb9"
@@ -92,17 +93,18 @@
                         ></button>
                         <!-- 存放base64值 -->
                         <input
-                            id="TEXT"
+                            id="IMG"
                             title="upload"
-                            type="hidden"
-                            name="imageBase64"
-                        ></input>
+                            type="file"
+                            name="image"
+                            style="display: none;"
+                        >
                         <input
                             class="ip"
                             type="text"
                             id="ip"
                             name="ip"
-                        ></input>
+                        >
 
                         <input
                             type="hidden"
@@ -210,6 +212,6 @@
     var ip = returnCitySN["cip"];//定义IP
     document.getElementById("ip").value = ip;//只获取ip
 </script>
-
+<!-- <script src="" -->
 
 </html>

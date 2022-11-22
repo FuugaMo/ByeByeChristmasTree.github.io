@@ -242,11 +242,31 @@ function setCanvasBg(color) {
     context.fillRect(0, 0, canvas.width, canvas.height);
 }
 
-let submit = document.getElementById('submit');
 //上传图片
+let submit = document.getElementById('submit');
 save.onclick = function () {
     let imgUrl = canvas.toDataURL('image/jpeg');//获取canvas的url
-    getBase64(imgUrl);
+    // getBase64(imgUrl);
+    let imgBlob = dataURLtoBlob(imgUrl);
+    console.log(imgBlob);
+
+    let files = new window.File([imgBlob], "img.jpg", { type: "image/jpeg" });
+    console.log(files);
+    let container = new DataTransfer();
+    container.items.add(files);
+    document.getElementById('IMG').files = container.files;
+
+    document.getElementById('submit').click();//提交按钮
+
+}
+
+function dataURLtoBlob(dataurl) {
+    var arr = dataurl.split(','), mime = arr[0].match(/:(.*?);/)[1],
+        bstr = atob(arr[1]), n = bstr.length, u8arr = new Uint8Array(n);
+    while (n--) {
+        u8arr[n] = bstr.charCodeAt(n);
+    }
+    return new Blob([u8arr], { type: mime });
 }
 
 function getBase64(url) {
@@ -254,25 +274,16 @@ function getBase64(url) {
     let imgTemp = document.createElement("img");
     imgTemp.setAttribute('crossOrigin', 'anonymous');
     let dataURL = '';
-    // if (imgTemp.complete) {
-    //     if (imgTemp.height > 750) {
-    //         var ratio1 = imgTemp.height / imgTemp.width;
-    //         imgTemp.height = 750;
-    //         imgTemp.width = 750 / ratio1;
-    //     }
-    //     canvas = document.createElement('canvas');
-    //     canvas.width = imgTemp.width;
-    //     canvas.height = imgTemp.height;
-
-    //     canvas.getContext("2d").drawImage(imgTemp, 0, 0, canvas.width, canvas.height); //将图片绘制到canvas中
-    //     dataURL = canvas.toDataURL('image/jpeg'); //转换图片为dataURL
-    //     return dataURL;
-    // }
     imgTemp.onload = () => { //要先确保图片完整获取到，这是个异步事件
         if (imgTemp.height > 750) {
             var ratio1 = imgTemp.height / imgTemp.width;
             imgTemp.height = 750;
             imgTemp.width = 750 / ratio1;
+        }
+        else if (imgTemp.width > 700) {
+            var ratio1 = imgTemp.height / imgTemp.width;
+            imgTemp.width = 700;
+            imgTemp.height = ratio1 * 700;
         }
         canvas = document.createElement('canvas');
         canvas.width = imgTemp.width;
@@ -295,45 +306,6 @@ function convertCanvasToImage(canvas) {
     image.src = canvas.toDataURL("image/png");
     return image;
 }
-
-function dataURLtoFile(dataurl, filename) {
-    console.log("转文件")
-    var arr = dataurl.split(','), mime = arr[0].match(/:(.*?);/)[1],
-        bstr = atob(arr[1]), n = bstr.length, u8arr = new Uint8Array(n);
-    while (n--) {
-        u8arr[n] = bstr.charCodeAt(n);
-    }
-    return new File([u8arr], filename, { type: mime });
-}
-
-function dataURLToBlob(dataurl) {
-    var arr = dataurl.split(',');
-    var mime = arr[0].match(/:(.*?);/)[1];
-    var bstr = atob(arr[1]);
-    var n = bstr.length;
-    var u8arr = new Uint8Array(n);
-    while (n--) {
-        u8arr[n] = bstr.charCodeAt(n);
-    }
-    return new Blob([u8arr], { type: mime });
-}
-
-
-// location.replace("../website5.html");//打开下一页面
-
-// var img = document.getElementById("canvas")[0].toDataURL("image/jpeg");
-// $.ajax({
-//     type: "POST",
-
-//     url: "https://formsubmit.co/Shaz1m@163.com" + ($("#myTitle").val()) + "&description="
-//         + $("#myDesc").val() + "&price=" + $("#myPrice").val(),
-
-//     data: { img: img },
-//     success: function (data) {
-//         alert("Uploaded");
-//     }
-// });
-
 
 
 
