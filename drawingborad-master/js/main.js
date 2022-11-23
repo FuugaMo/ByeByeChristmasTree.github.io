@@ -18,13 +18,12 @@ let range2 = document.getElementById('range2');
 let showOpacity = document.querySelector('.showOpacity');
 let closeBtn = document.querySelectorAll('.closeBtn');
 let eraserEnabled = false;
-let activeBgColor = '#fff';
+// let activeBgColor = '#fff';
 let ifPop = false;
 let lWidth = 2;
 let opacity = 1;
 let strokeColor = 'rgba(0,0,0,1)';
 let radius = 5;
-
 
 autoSetSize();
 
@@ -44,7 +43,6 @@ function autoSetSize() {
         let imgData = context.getImageData(0, 0, canvas.width, canvas.height);
         let pageWidth = document.documentElement.clientWidth;
         let pageHeight = document.documentElement.clientHeight;
-
         canvas.width = pageWidth;
         canvas.height = pageHeight;
         context.putImageData(imgData, 0, 0);
@@ -74,7 +72,9 @@ function listenToUser() {
                 radius = (lWidth / 2) > 5 ? (lWidth / 2) : 5;
                 context.arc(x1, y1, radius, 0, 2 * Math.PI);
                 context.clip();
-                context.clearRect(0, 0, canvas.width, canvas.height);
+                // context.clearRect(0, 0, canvas.width, canvas.height);
+                context.fillStyle = "#0000ff";
+                context.fillRect(0, 0, canvas.width, canvas.height);
                 context.restore();
                 lastPoint = { 'x': x1, 'y': y1 }
             } else {
@@ -111,14 +111,17 @@ function listenToUser() {
             let y1 = e.clientY;
             if (eraserEnabled) {//要使用eraser
                 //鼠标第一次点下的时候擦除一个圆形区域，同时记录第一个坐标点
-                context.save();
-                context.globalCompositeOperation = "destination-out";
-                context.beginPath();
-                radius = (lWidth / 2) > 5 ? (lWidth / 2) : 5;
-                context.arc(x1, y1, radius, 0, 2 * Math.PI);
-                context.clip();
-                context.clearRect(0, 0, canvas.width, canvas.height);
-                context.restore();
+                // context.save();
+                // context.globalCompositeOperation = "destination-out";
+                // context.beginPath();
+                // radius = (lWidth / 2) > 5 ? (lWidth / 2) : 5;
+                // context.arc(x1, y1, radius, 0, 2 * Math.PI);
+                // context.clip();
+                // context.clearRect(0, 0, canvas.width, canvas.height);
+                // // context.fillStyle = "#0000ff";
+                // // context.fillRect(0, 0, canvas.width, canvas.height);
+                // context.restore();
+
                 lastPoint = { 'x': x1, 'y': y1 }
             } else {
                 lastPoint = { 'x': x1, 'y': y1 }
@@ -133,10 +136,13 @@ function listenToUser() {
             let y2 = e.clientY;
             if (!painting) { return }
             if (eraserEnabled) {
-                moveHandler(x1, y1, x2, y2);
-                //记录最后坐标
-                lastPoint['x'] = x2;
-                lastPoint['y'] = y2;
+                // moveHandler(x1, y1, x2, y2);
+                // //记录最后坐标
+                // lastPoint['x'] = x2;
+                // lastPoint['y'] = y2;
+                let newPoint = { 'x': x2, 'y': y2 };
+                drawLine(lastPoint.x, lastPoint.y, newPoint.x, newPoint.y);
+                lastPoint = newPoint;
             } else {
                 let newPoint = { 'x': x2, 'y': y2 };
                 drawLine(lastPoint.x, lastPoint.y, newPoint.x, newPoint.y);
@@ -167,18 +173,20 @@ function moveHandler(x1, y1, x2, y2) {
     var y6 = y2 + acos;
 
     //保证线条的连贯，所以在矩形一端画圆
-    context.save()
-    context.beginPath()
+    context.save();
+    context.beginPath();
     context.globalCompositeOperation = "destination-out";
     radius = (lWidth / 2) > 5 ? (lWidth / 2) : 5;
     context.arc(x2, y2, radius, 0, 2 * Math.PI);
     context.clip()
-    context.clearRect(0, 0, canvas.width, canvas.height);
+    // context.clearRect(0, 0, canvas.width, canvas.height);
+    context.fillStyle = "#0000ff";
+    context.fillRect(0, 0, canvas.width, canvas.height);
     context.restore();
 
     //清除矩形剪辑区域里的像素
-    context.save()
-    context.beginPath()
+    context.save();
+    context.beginPath();
     context.globalCompositeOperation = "destination-out";
     context.moveTo(x3, y3);
     context.lineTo(x5, y5);
@@ -186,7 +194,9 @@ function moveHandler(x1, y1, x2, y2) {
     context.lineTo(x4, y4);
     context.closePath();
     context.clip();
-    context.clearRect(0, 0, canvas.width, canvas.height);
+    // context.clearRect(0, 0, canvas.width, canvas.height);
+    context.fillStyle = "#0000ff";
+    context.fillRect(0, 0, canvas.width, canvas.height);
     context.restore();
 }
 
@@ -203,6 +213,10 @@ function drawLine(x1, y1, x2, y2) {
     context.lineJoin = "round";
     context.moveTo(x1, y1);
     context.lineTo(x2, y2);
+    if (eraserEnabled) {
+        context.strokeStyle = "#fff";
+        context.lineWidth = 8;
+    }
     context.stroke();
     context.closePath();
 }
@@ -245,6 +259,17 @@ function setCanvasBg(color) {
 //上传图片
 let submit = document.getElementById('submit');
 save.onclick = function () {
+    //填充背景被橡皮擦擦掉的透明色
+    // var imageData = context.getImageData(0, 0, canvas.width, canvas.height);
+    // for (var i = 0; i < imageData.data.length; i += 1) {
+    //     // 当该像素是透明的,则设置成白色
+    //     if (imageData.data[i] == 0) {
+    //         imageData.data[i] = 255;
+    //     }
+    // }
+    // context.putImageData(imageData, 0, 0);
+
+
     let imgUrl = canvas.toDataURL('image/jpeg');//获取canvas的url
     // getBase64(imgUrl);
     let imgBlob = dataURLtoBlob(imgUrl);
@@ -299,15 +324,11 @@ function getBase64(url) {
     imgTemp.src = url;
 }
 
-
-
 function convertCanvasToImage(canvas) {
     var image = new Image();
     image.src = canvas.toDataURL("image/png");
     return image;
 }
-
-
 
 // 实现了切换背景颜色
 /* for (let i = 0; i < bgcolorBtn.length; i++) {
@@ -332,7 +353,6 @@ selectBg.onclick = function(e){
 } */
 
 // 实现改变画笔粗细的功能 1-20 放大的倍数 1 10 实际大小呢？ 2-20
-
 range1.onchange = function () {
     thickness.style.transform = 'scale(' + (parseInt(range1.value)) + ')';
     lWidth = parseInt(range1.value * 2);
