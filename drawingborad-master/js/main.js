@@ -49,6 +49,7 @@ function autoSetSize() {
         canvas.width = pageWidth;
         canvas.height = pageHeight;
         context.putImageData(imgData, 0, 0);
+        context.strokeStyle = prevBrushStyle;
     }
 
     window.onresize = function () {
@@ -236,8 +237,6 @@ eraser.onclick = function () {
 }
 // 点击画笔
 brush.onclick = function () {
-    eraserEnabled = false;
-
     console.log(context.strokeStyle, context.lineWidth);
     context.strokeStyle = prevBrushStyle;
     context.lineWidth = prevlineWidth;
@@ -245,13 +244,17 @@ brush.onclick = function () {
 
     brush.classList.add('active');
     eraser.classList.remove('active');
-    if (!ifPop) {
-        // 弹出框
-        penDetail.classList.add('active');
-    } else {
-        penDetail.classList.remove('active');
+
+    if (!eraserEnabled) {
+        if (!ifPop) {
+            // 弹出框
+            penDetail.classList.add('active');
+        } else {
+            penDetail.classList.remove('active');
+        }
+        ifPop = !ifPop;
     }
-    ifPop = !ifPop;
+    eraserEnabled = false;
 }
 
 // 实现清屏
