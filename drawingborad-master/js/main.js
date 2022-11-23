@@ -226,9 +226,11 @@ function drawLine(x1, y1, x2, y2) {
 
 // 点击橡皮檫
 eraser.onclick = function () {
+    if (!eraserEnabled) {
+        prevBrushStyle = context.strokeStyle;
+        prevlineWidth = context.lineWidth;
+    }
     eraserEnabled = true;
-    prevBrushStyle = context.strokeStyle;
-    prevlineWidth = context.lineWidth;
     eraser.classList.add('active');
     brush.classList.remove('active');
 }
