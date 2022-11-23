@@ -25,6 +25,9 @@ let opacity = 1;
 let strokeColor = 'rgba(0,0,0,1)';
 let radius = 5;
 
+let prevBrushStyle = "#b1987a";
+let prevlineWidth = 2;
+
 autoSetSize();
 
 setCanvasBg('white');
@@ -224,12 +227,20 @@ function drawLine(x1, y1, x2, y2) {
 // 点击橡皮檫
 eraser.onclick = function () {
     eraserEnabled = true;
+    prevBrushStyle = context.strokeStyle;
+    prevlineWidth = context.lineWidth;
     eraser.classList.add('active');
     brush.classList.remove('active');
 }
 // 点击画笔
 brush.onclick = function () {
     eraserEnabled = false;
+
+    console.log(context.strokeStyle, context.lineWidth);
+    context.strokeStyle = prevBrushStyle;
+    context.lineWidth = prevlineWidth;
+    console.log(context.strokeStyle, context.lineWidth);
+
     brush.classList.add('active');
     eraser.classList.remove('active');
     if (!ifPop) {
@@ -356,6 +367,7 @@ selectBg.onclick = function(e){
 range1.onchange = function () {
     thickness.style.transform = 'scale(' + (parseInt(range1.value)) + ')';
     lWidth = parseInt(range1.value * 2);
+    prevlineWidth = lWidth;
 }
 
 // range2.onchange = function () {
@@ -384,6 +396,7 @@ function getColor() {
             ifPop = false;
         }
     }
+    prevBrushStyle = context.strokeStyle;
 }
 
 // 实现撤销和重做的功能
