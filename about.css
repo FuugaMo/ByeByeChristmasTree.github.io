@@ -67,3 +67,7 @@
 }
 
 /* 导航栏结束 */
+
+html {
+    cursor: url("光标.png"), auto;
+}
