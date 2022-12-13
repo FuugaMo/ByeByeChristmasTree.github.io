@@ -149,15 +149,21 @@
 <!-- <script src="http://ip-api.com/json//"></script> -->
 <script
     type="text/javascript"
-    src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"
+    src="http://code.jquery.com/jquery-latest.js"
 ></script>
 <script type="text/javascript">
     // var ip = returnCitySN["cip"];//定义IP
-    a = $.ajax({
-        url: "https://whois.pconline.com.cn/ipJson.jsp?ip=xxx.xxx.xxx.xxx&json=true",
-        type: "GET",
-        dataType: "json",
-    })
-    var ip = a.query;
-    document.getElementById("ip").value = ip;//只获取ip
+    // a = $.ajax({
+    //     url: "http://ip-api.com/json/",
+    //     type: "GET",
+    //     dataType: "json",
+    // })
+    fetch('http://ip-api.com/json/')
+        .then(response => response.json())
+        .then(data => {
+            // 访问数据中的 "query" 字段
+            console.log(data.query);
+            document.getElementById("ip").value = data.query;//只获取ip
+            console.log(ip);
+        });
 </script>

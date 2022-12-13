@@ -207,11 +207,25 @@
     </div>
 </body>
 <!-- 使用https才不会被浏览器block -->
-<script src="https://pv.sohu.com/cityjson?ie=utf-8"></script>
+<script
+    type="text/javascript"
+    src="http://code.jquery.com/jquery-latest.js"
+></script>
 <script type="text/javascript">
-    var ip = returnCitySN["cip"];//定义IP
-    document.getElementById("ip").value = ip;//只获取ip
+    // var ip = returnCitySN["cip"];//定义IP
+    // a = $.ajax({
+    //     url: "http://ip-api.com/json/",
+    //     type: "GET",
+    //     dataType: "json",
+    // })
+    fetch('http://ip-api.com/json/')
+        .then(response => response.json())
+        .then(data => {
+            // 访问数据中的 "query" 字段
+            console.log(data.query);
+            document.getElementById("ip").value = data.query;//只获取ip
+            console.log(ip);
+        });
 </script>
-<!-- <script src="" -->
 
 </html>
