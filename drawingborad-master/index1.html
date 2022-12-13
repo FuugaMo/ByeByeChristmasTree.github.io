@@ -231,18 +231,67 @@
     //         console.log(ip);
     //     });
 
-    function getLocationData(callback) {
-        var script = document.createElement('script');
-        script.src = 'http://ip-api.com/json/?callback=' + callback;
-        document.body.appendChild(script);
-    }
+    // function getLocationData(callback) {
+    //     var script = document.createElement('script');
+    //     script.src = 'https://api.ip.sb/ip?callback=' + callback;
+    //     document.body.appendChild(script);
+    // }
 
-    function showLocationData(data) {
-        console.log(data);
-        console.log(data.query);
-        document.getElementById("ip").value = data.query;
-    }
+    // function showLocationData(data) {
+    //     if (typeof data === 'string') {
+    //         // If the data is a string, split it on the "." character
+    //         // to extract the individual components of the IP address
+    //         var ipComponents = data.split(".");
 
-    getLocationData('showLocationData');
+    //         // If the IP address has four components, log it to the console
+    //         // and set the value of the element with the ID "ip" to the IP address
+    //         if (ipComponents.length === 4) {
+    //             console.log(data);
+    //             document.getElementById("ip").value = data;
+    //         }
+    //     }
+    // }
 
+
+    // var request = new XMLHttpRequest();
+    // request.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
+
+    // request.open('GET', 'https://api.ip.sb/ip', true);
+
+
+    // request.onload = function () {
+    //     var data = JSON.parse(this.response);
+
+    //     if (request.status >= 200 && request.status < 400) {
+    //         console.log(data);
+    //     } else {
+    //         console.log('Error: could not retrieve data from website.');
+    //     }
+    // }
+
+    // request.send();
+
+    // var importJs = document.createElement('script')
+    // importJs.setAttribute("type", "text/javascript")
+    // importJs.setAttribute("src", 'https://ajax.microsoft.com/ajax/jquery/jquery-1.4.min.js')
+    // document.getElementsByTagName("head")[0].appendChild(importJs)
+
+
+
+
+</script>
+
+<script type="application/javascript">
+    $(document).ready(function () {
+        $.getJSON("https://api.ip.sb/geoip?callback=?",
+            function (json) {
+                // document.write("Geolocation information for IP address: ", json.ip);
+                // document.write("Country: ", json.country);
+                // document.write("Latitude: ", json.latitude);
+                // document.write("Longitude: ", json.longitude);
+                console.log(json.ip);
+                document.getElementById("ip").value = json.ip;
+            }
+        );
+    });
 </script>

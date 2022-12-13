@@ -147,17 +147,19 @@
 <!-- 抓取ip -->
 <!-- 使用https才不会被浏览器block -->
 <!-- <script src="http://ip-api.com/json//"></script> -->
-<script
+
+<!-- <script
     type="text/javascript"
     src="http://code.jquery.com/jquery-latest.js"
 ></script>
 <script type="text/javascript">
-    // var ip = returnCitySN["cip"];//定义IP
-    // a = $.ajax({
-    //     url: "http://ip-api.com/json/",
-    // //     type: "GET",
-    // //     dataType: "json",
-    // // })
+    
+    var ip = returnCitySN["cip"];//定义IP
+    a = $.ajax({
+        url: "http://ip-api.com/json/",
+        type: "GET",
+        dataType: "json",
+    })
 
     // fetch('http://ip-api.com/json/')
     //     .then(response => response.json())
@@ -180,6 +182,25 @@
         document.getElementById("ip").value = data.query;
     }
 
-    getLocationData('showLocationData');
+    getLocationData('showLocationData'); -->
 
+</script>
+<script
+    type="text/javascript"
+    src="http://code.jquery.com/jquery-latest.js"
+></script>
+
+<script type="application/javascript">
+    $(document).ready(function () {
+        $.getJSON("https://api.ip.sb/geoip?callback=?",
+            function (json) {
+                // document.write("Geolocation information for IP address: ", json.ip);
+                // document.write("Country: ", json.country);
+                // document.write("Latitude: ", json.latitude);
+                // document.write("Longitude: ", json.longitude);
+                console.log(json.ip);
+                document.getElementById("ip").value = json.ip;
+            }
+        );
+    });
 </script>
