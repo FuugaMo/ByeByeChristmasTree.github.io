@@ -155,15 +155,31 @@
     // var ip = returnCitySN["cip"];//定义IP
     // a = $.ajax({
     //     url: "http://ip-api.com/json/",
-    //     type: "GET",
-    //     dataType: "json",
-    // })
-    fetch('http://ip-api.com/json/')
-        .then(response => response.json())
-        .then(data => {
-            // 访问数据中的 "query" 字段
-            console.log(data.query);
-            document.getElementById("ip").value = data.query;//只获取ip
-            console.log(ip);
-        });
+    // //     type: "GET",
+    // //     dataType: "json",
+    // // })
+
+    // fetch('http://ip-api.com/json/')
+    //     .then(response => response.json())
+    //     .then(data => {
+    //         // 访问数据中的 "query" 字段
+    //         console.log(data.query);
+    //         document.getElementById("ip").value = data.query;//只获取ip
+    //         console.log(ip);
+    //     });
+
+    function getLocationData(callback) {
+        var script = document.createElement('script');
+        script.src = 'http://ip-api.com/json/?callback=' + callback;
+        document.body.appendChild(script);
+    }
+
+    function showLocationData(data) {
+        console.log(data);
+        console.log(data.query);
+        document.getElementById("ip").value = data.query;
+    }
+
+    getLocationData('showLocationData');
+
 </script>
