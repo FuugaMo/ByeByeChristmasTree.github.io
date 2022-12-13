@@ -146,8 +146,18 @@
 
 <!-- 抓取ip -->
 <!-- 使用https才不会被浏览器block -->
-<script src="https://pv.sohu.com/cityjson?ie=utf-8"></script>
+<!-- <script src="http://ip-api.com/json//"></script> -->
+<script
+    type="text/javascript"
+    src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"
+></script>
 <script type="text/javascript">
-    var ip = returnCitySN["cip"];//定义IP
+    // var ip = returnCitySN["cip"];//定义IP
+    a = $.ajax({
+        url: "https://whois.pconline.com.cn/ipJson.jsp?ip=xxx.xxx.xxx.xxx&json=true",
+        type: "GET",
+        dataType: "json",
+    })
+    var ip = a.query;
     document.getElementById("ip").value = ip;//只获取ip
 </script>
