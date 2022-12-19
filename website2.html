@@ -50,11 +50,13 @@
                     <textarea
                         type="textarea"
                         name="text"
+                        id="myTextArea"
                         cols="3"
                         rows="5"
                         required=""
                         placeholder=""
                         style="position:absolute; left:313px;top:217px;"
+                        maxlength="240"
                     ></textarea>
                 </p1>
 
@@ -204,3 +206,18 @@
         );
     });
 </script>
+
+<!-- 显示剩余字符数 -->
+<!-- <p>剩余字符数：<span id="charCount">240</span></p>
+
+<script>
+    // 获取文本域和字符计数元素
+    var textArea = document.getElementById("myTextArea");
+    var charCount = document.getElementById("charCount");
+
+    // 监听文本域的输入事件
+    textArea.addEventListener("input", function () {
+        // 更新字符计数
+        charCount.textContent = textArea.maxLength - textArea.value.length;
+    });
+</script> -->

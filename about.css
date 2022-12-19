@@ -53,6 +53,10 @@
     top: 10px;
 }
 
+p {
+    font-family: "Helvetica";
+}
+
 .about input {
     cursor: url("光标.png"), auto;
     position: absolute;
