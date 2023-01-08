@@ -1,6 +1,6 @@
 #content {
     position: relative;
-    margin-top: 350px;
+    margin-top: 10px;
     margin-left: 20px;
 }
 
@@ -53,7 +53,9 @@
     top: 10px;
 }
 
-p {
+p1,
+p2,
+p3 {
     font-family: "Helvetica";
 }
 

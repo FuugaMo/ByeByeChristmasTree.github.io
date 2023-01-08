@@ -149,11 +149,12 @@ span {
 .hiddenInfoA {
     display: inline-block;
     width: 15%;
-    height: 100%;
+    height: auto;
     /* overflow: auto; */
     position: absolute;
     left: 5%;
-    top: 0px;
+    /*修改以让第一棵树的Paint图不溢出*/
+    top: 40px;
     background-color: white;
     opacity: 0;
     pointer-events: none;
@@ -169,7 +170,7 @@ span {
     /* overflow: auto; */
     position: absolute;
     left: 28%;
-    top: 0px;
+    top: 40px;
     background-color: white;
     opacity: 0;
     pointer-events: none;
@@ -185,7 +186,7 @@ span {
     /* overflow: auto; */
     position: absolute;
     left: 52%;
-    top: 0px;
+    top: 40px;
     opacity: 0;
     background-color: white;
     pointer-events: none;
@@ -201,7 +202,7 @@ span {
     /* overflow: auto; */
     position: absolute;
     left: 75%;
-    top: 0px;
+    top: 40px;
     opacity: 0;
     background-color: white;
     pointer-events: none;
