@@ -56,7 +56,9 @@
 p1,
 p2,
 p3 {
-    font-family: "Helvetica";
+    font-family: "Gill Sans", sans-serif;
+    font-size: large;
+    color: gray;
 }
 
 .about input {
