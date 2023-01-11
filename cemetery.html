@@ -346,7 +346,7 @@
         />
         <img
             class="Tree"
-            src="./CemeteryImage/BlankTree/BlankTree.png"
+            src="./CemeteryImage/Tree16/Tree16Paint.png"
             onmouseover="show16();"
             onmouseout="dis16();"
         />
@@ -383,7 +383,7 @@
             <span>Be a happy angel there!
             </span>
         </div>
-        <!-- <div
+        <div
             class="hiddenInfoD"
             id="hiddenInfo16"
         >
@@ -391,13 +391,86 @@
                 class="TreeH"
                 src="./CemeteryImage/Tree16/Tree16Real.jpeg"
             />
-            <span>Goodbye Christmas tree, it's nice to hang out with you for a week.
+            <span>It was nice to know you :"( I am going to miss you so much
             </span>
-        </div> -->
+        </div>
     </div>
 
     <!-- 17-20 -->
+    <div
+        class="Content"
+        style="position: relative;"
+        width="100%"
+    >
 
+        <img
+            class="Tree"
+            src="./CemeteryImage/Tree17/Tree17Paint.png"
+            onmouseover="show17();"
+            onmouseout="dis17();"
+        />
+        <img
+            class="Tree"
+            src="./CemeteryImage/Tree18/Tree18Paint.png"
+            onmouseover="show18();"
+            onmouseout="dis18();"
+        />
+        <img
+            class="Tree"
+            src="./CemeteryImage/BlankTree/BlankTree.png"
+            onmouseover="show19();"
+            onmouseout="dis19();"
+        />
+        <img
+            class="Tree"
+            src="./CemeteryImage/BlankTree/BlankTree.png"
+            onmouseover="show20();"
+            onmouseout="dis20();"
+        />
+
+        <div
+            class="hiddenInfoA"
+            id="hiddenInfo17"
+        >
+            <img
+                class="TreeH"
+                src="./CemeteryImage/Tree17/Tree17Real.jpeg"
+            />
+            <span>Goodbye Christmas tree, it’s nice to hang out with you for a week.</span>
+        </div>
+        <div
+            class="hiddenInfoB"
+            id="hiddenInfo18"
+        >
+            <img
+                class="TreeH"
+                src="./CemeteryImage/Tree18/Tree18Real.png"
+            />
+            <span>You are cute!</span>
+        </div>
+        <!-- <div
+            class="hiddenInfoC"
+            id="hiddenInfo19"
+        >
+            <img
+                class="TreeH"
+                src="./CemeteryImage/Tree15/Tree15Real.jpeg"
+            />
+            <span>Be a happy angel there!
+            </span>
+        </div>
+        <div
+            class="hiddenInfoD"
+            id="hiddenInfo20"
+        >
+            <img
+                class="TreeH"
+                src="./CemeteryImage/Tree16/Tree16Real.jpeg"
+            />
+            <span>It was nice to know you :"( I am going to miss you so much
+            </span>
+        </div> -->
+    </div>
 </body>
 
 <!-- 光标移动导致卡顿闪烁解决方案https://blog.csdn.net/applyTang/article/details/98640788 -->
@@ -497,5 +570,29 @@
     }
     function dis16() {
         document.getElementById("hiddenInfo16").style.opacity = "0";
+    }
+    function show17() {
+        document.getElementById("hiddenInfo17").style.opacity = "0.6";
+    }
+    function dis17() {
+        document.getElementById("hiddenInfo17").style.opacity = "0";
+    }
+    function show18() {
+        document.getElementById("hiddenInfo18").style.opacity = "0.6";
+    }
+    function dis18() {
+        document.getElementById("hiddenInfo18").style.opacity = "0";
+    }
+    function show19() {
+        document.getElementById("hiddenInfo19").style.opacity = "0.6";
+    }
+    function dis19() {
+        document.getElementById("hiddenInfo19").style.opacity = "0";
+    }
+    function show20() {
+        document.getElementById("hiddenInfo20").style.opacity = "0.6";
+    }
+    function dis20() {
+        document.getElementById("hiddenInfo20").style.opacity = "0";
     }
 </script>
