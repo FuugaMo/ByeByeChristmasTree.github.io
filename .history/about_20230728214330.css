@@ -79,6 +79,8 @@ p3 {
 }
 
 .text2 {
+    display: flex;
+    align-items: flex-start;
     margin-top: 10px;
     margin-left: 20px;
 }

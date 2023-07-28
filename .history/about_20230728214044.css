@@ -4,6 +4,7 @@
     align-items: flex-start;
     margin-top: 10px;
     margin-left: 20px;
+    margin-bottom: 10px;
 }
 
 #content img {
@@ -16,9 +17,9 @@
 }
 
 .vid {
-    margin-top: 30px;
+    margin-top: 20px;
     margin-left: 20px;
-
+    margin-bottom: 10px;
 }
 
 /* 导航栏 */
@@ -76,11 +77,6 @@ p3 {
     font-family: "Gill Sans", sans-serif;
     font-size: large;
     color: gray;
-}
-
-.text2 {
-    margin-top: 10px;
-    margin-left: 20px;
 }
 
 .about input {

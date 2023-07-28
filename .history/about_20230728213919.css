@@ -16,9 +16,8 @@
 }
 
 .vid {
-    margin-top: 30px;
+    margin-top: 10px;
     margin-left: 20px;
-
 }
 
 /* 导航栏 */
@@ -76,11 +75,6 @@ p3 {
     font-family: "Gill Sans", sans-serif;
     font-size: large;
     color: gray;
-}
-
-.text2 {
-    margin-top: 10px;
-    margin-left: 20px;
 }
 
 .about input {
