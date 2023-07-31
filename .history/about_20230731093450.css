@@ -102,7 +102,7 @@ html {
     cursor: url("光标.png"), auto;
 }
 
-.link {
+link {
     width: 30px;
     margin-right: 10px;
 }

@@ -106,3 +106,7 @@ html {
     width: 30px;
     margin-right: 10px;
 }
+
+.link image {
+    cursor: url("光标.png");
+}
