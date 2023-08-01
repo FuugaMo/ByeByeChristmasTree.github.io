@@ -92,19 +92,10 @@ html {
 }
 
 .link {
-    margin-top: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    /*元素居中*/
+    margin: 0 auto;
 
-}
+    width: 30px;
 
-.link a {
-    margin: 10px;
-    /* 可根据需要调整间距 */
-}
-
-.link img {
-    width: 50px;
-    height: 50px;
+    margin-right: 10px;
 }

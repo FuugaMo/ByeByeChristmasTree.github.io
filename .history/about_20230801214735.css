@@ -72,6 +72,11 @@ p3 {
     color: gray;
 }
 
+.text2 {
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
 .about input {
     cursor: url("光标.png"), auto;
     position: absolute;
@@ -92,19 +97,6 @@ html {
 }
 
 .link {
-    margin-top: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-}
-
-.link a {
-    margin: 10px;
-    /* 可根据需要调整间距 */
-}
-
-.link img {
-    width: 50px;
-    height: 50px;
+    width: 30px;
+    margin-right: 10px;
 }
