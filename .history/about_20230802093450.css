@@ -92,7 +92,7 @@ html {
 }
 
 .link {
-    margin-top: 0px;
+    margin-top: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -100,7 +100,7 @@ html {
 }
 
 .link a {
-    margin: 7px;
+    margin: 5px;
     /* 可根据需要调整间距 */
 }
 
